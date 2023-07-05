@@ -1,0 +1,24 @@
+AC_INIT([cnmtfe], [0.0.1],[wyattwradkiewicz@gmail.com],[])
+AC_PREREQ([2.67])
+AC_PROG_CC
+PKG_CHECK_MODULES([DEPS], [SDL2], [SDL2_mixer])
+AC_CONFIG_AUX_DIR([build-aux])
+AM_INIT_AUTOMAKE([-Wall -Werror subdir-objects])
+AC_CONFIG_SRCDIR([src/main.c])
+AC_CONFIG_FILES([Makefile])
+
+AC_HEADER_STDBOOL
+AC_C_INLINE
+AC_TYPE_INT8_T
+AC_TYPE_UINT8_T
+AC_TYPE_INT16_T
+AC_TYPE_UINT16_T
+AC_TYPE_INT32_T
+AC_TYPE_UINT32_T
+AC_TYPE_INT64_T
+AC_TYPE_UINT64_T
+AC_CHECK_TYPES([uintptr_t])
+AC_CHECK_TYPES([intptr_t])
+AC_CHECK_TYPES([ptrdiff_t])
+
+AC_OUTPUT
